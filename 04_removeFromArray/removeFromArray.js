@@ -19,6 +19,7 @@ const removeFromArray = function(array, arrayRemoved) {
 
 console.log(removeFromArray([1, 2, 3, 4, 5], 1, 4))
 
+// CHECK OUT array.shift DOCUMENTATIONS
 // THIS DOES NOT WORK EXPERIMENT LATER
 
 // Do not edit below this line
