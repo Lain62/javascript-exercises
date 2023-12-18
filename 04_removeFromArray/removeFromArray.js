@@ -1,26 +1,21 @@
-const removeFromArray = function(array, arrayRemoved) {
+const removeFromArray = function(num, ...args) {
 
+	let arraynum = []
 
+	num.forEach(array_each)
 
-    function removeCalculation(){
-        for (i = 0; i <= arrayRemoved.length; i++){
-            let index = array.indexOf(arrayRemoved[i]);
-            array.splice(index, 1);
-            console.log(i)
-            
-    }
- 
-    }
-    let legt = arrayRemoved.length
-    return legt
+	function array_each(item) {
+		if(!args.includes(item)){
+			arraynum.push(item)
+		}
+	}
 
-    
+	return arraynum
 };
 
-console.log(removeFromArray([1, 2, 3, 4, 5], 1, 4))
 
-// CHECK OUT array.shift DOCUMENTATIONS
-// THIS DOES NOT WORK EXPERIMENT LATER
+// array.filter
+// check also infinite optional args
 
 // Do not edit below this line
 module.exports = removeFromArray;
