@@ -1,16 +1,8 @@
 const palindromes = function (args) {
-	args = args.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase()
-	let reverse = "";
-	let i = 0;
-	while (i < args.length){
-		i++;
-		reverse += args[args.length-i]
-	}
-	if (reverse.replace(/ /g, '')== args.replace(/ /g, '')){
-		return true
-	} else {
-		return false;
-	}
+	args = args.toLowerCase().replace(/[^a-z0-9]/g,"")
+	let reverse = args.split('').reverse().join('')
+	return reverse.replace(/ /g, '') == args.replace(/ /g, '')
+
 };
 
 // Do not edit below this line
